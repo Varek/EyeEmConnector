@@ -2,6 +2,12 @@ source "http://rubygems.org"
 # Add dependencies required to use your gem here.
 # Example:
 #   gem "activesupport", ">= 2.3.5"
+  gem 'oauth2'
+  gem 'multi_json'
+  gem 'faraday', "~> 0.8.0.rc2"
+  gem 'faraday_middleware'
+  gem 'rash'
+
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
