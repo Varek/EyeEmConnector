@@ -7,7 +7,7 @@ module EyeEmConnector
 
       def topics(options={})
         response = request('topics',options)
-        Hashie::Rash.new(MultiJson.decode(response.body))
+        response.body
       end
 
     end

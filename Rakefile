@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/Varek/EyeEmConnector"
   gem.license = "MIT"
   gem.summary = "EyeEm API Wrapper in Ruby"
-  #gem.description = %Q{TODO: longer description of your gem}
+  gem.description = "EyeEm API Wrapper in Ruby"
   gem.email = "4ndr3r13ck@googlemail.com"
   gem.authors = ["André Rieck"]
   # dependencies defined in Gemfile

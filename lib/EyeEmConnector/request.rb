@@ -8,7 +8,8 @@ module EyeEmConnector
         options.each do |option, value|
           rq.params[option] = value
         end
-      end
+      end || ''
+      response
     end
   end
   

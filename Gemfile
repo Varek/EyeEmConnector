@@ -4,7 +4,7 @@ source "http://rubygems.org"
 #   gem "activesupport", ">= 2.3.5"
   gem 'oauth2'
   gem 'multi_json'
-  gem 'faraday', "~> 0.8.0.rc2"
+  gem 'faraday', "~> 0.8.0"
   gem 'faraday_middleware'
   gem 'rash'
 
@@ -16,5 +16,4 @@ group :development do
   gem "rdoc", "~> 3.12"
   gem "bundler", "~> 1.0.0"
   gem "jeweler", "~> 1.8.3"
-  gem "rcov", ">= 0"
 end

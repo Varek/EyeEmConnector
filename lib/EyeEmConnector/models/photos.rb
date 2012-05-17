@@ -5,18 +5,19 @@ module EyeEmConnector
     module Photos
       # for the options of different albums endpoints, see https://github.com/eyeem/Public-API/wiki/Albums 
 
-      def photos(options={})
+      def photos(options={}) #access token needed, returns photos of authenticated user
         response = request('photos',options)
-        Hashie::Rash.new(MultiJson.decode(response.body))
+        response.body
       end
 
       def photo(id,options={})
         response = request('photos/'+id.to_s,options)
-        Hashie::Rash.new(MultiJson.decode(response.body))
+        response.body
       end
 
       def photo_likers(id,options={})
         response = request('photos/'+id.to_s+'/likers',options)
+        response.body
       end
 
       def photo_liker(photo_id,liker_id,options={})
@@ -26,12 +27,12 @@ module EyeEmConnector
 
       def photo_comments(id,options={})
         response = request('photos/'+id.to_s+'/comments',options)
-        Hashie::Rash.new(MultiJson.decode(response.body))
+        response.body
       end
 
       def photo_comment(photo_id,contributer_id,options={})
         response = request("photos/#{photo_id.to_s}/comments/#{contributer_id}",options)
-        Hashie::Rash.new(MultiJson.decode(response.body))
+        response.body
       end
 
     end

@@ -1,6 +1,6 @@
 = EyeEmConnector
 
-Description goes here.
+Wrapper for the EyeEm API(https://github.com/eyeem/Public-API/wiki).
 
 == Contributing to EyeEmConnector
  
@@ -14,6 +14,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2012 André Rieck. See LICENSE.txt for
+Copyright (c) 2012 André Rieck. See LICENSE.txt for
 further details.
 

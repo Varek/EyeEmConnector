@@ -17,11 +17,13 @@ module EyeEmConnector
     end
 
     def connection
-      Faraday::Connection.new(:url => Configuration::ENDPOINT, :params => {:client_id => @client_id}, :ssl => {:verify => false}) #do |builder|
-        #builder.use FaradayMiddleware::EncodeJson
-        #builder.use FaradayMiddleware::Rashify
-        #builder.use FaradayMiddleware::ParseJson, :content_type => 'application/json'
-      #end
+      params = access_token.nil? ? {:client_id => @client_id} : {}
+      Faraday::Connection.new(:url => Configuration::ENDPOINT, :params => params, :ssl => {:verify => false}) do |builder|
+        builder.request :oauth2, @access_token unless @access_token.nil?
+        builder.request :json
+        builder.response :json
+        builder.adapter Faraday.default_adapter
+      end
     end
 
     include Request
