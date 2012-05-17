@@ -6,43 +6,41 @@ Ruby Wrapper for the EyeEm API(https://github.com/eyeem/Public-API/wiki).
 
 Create an EyeEm App here: http://www.eyeem.com/developers and enter at least the client_id and if you need it the retrieved access token from a user in the configuration. And we are ready to go.
 
-```ruby
-require 'EyeEmConnector'
 
-EyeEmConnector.configure do |config|
-  config.client_id = 'client_id'
-  config.client_secret = 'client_secret'
-  config.access_token = 'access_token'
-end 
+  require 'EyeEmConnector'
+  
+  EyeEmConnector.configure do |config|
+    config.client_id = 'client_id'
+    config.client_secret = 'client_secret'
+    config.access_token = 'access_token'
+  end 
 
-```
 
 Requests can be done afterwards, lik this:
 
-``` ruby
-EyeEmConnector.users(59550)
 
-```
+  EyeEmConnector.users(59550)
+
 
 This returns a Hash like this
 
-```ruby
-{
-  "user"=>{
-  "id"=>"59550", 
-  "nickname"=>"varek", 
-  "fullname"=>"André", 
-  "webUrl"=>"http://www.eyeem.com/u/varek", 
-  "thumbUrl"=>"https://graph.facebook.com/1449441885/picture?type=square", 
-  "photoUrl"=>"https://graph.facebook.com/1449441885/picture?type=large", 
-  "totalPhotos"=>21, 
-  "totalFollowers"=>11, 
-  "totalFriends"=>13, 
-  "totalLikedAlbums"=>15, 
-  "totalLikedPhotos"=>31, 
-  "description"=>""}
-}
-```
+
+  {
+    "user"=>{
+    "id"=>"59550", 
+    "nickname"=>"varek", 
+    "fullname"=>"André", 
+    "webUrl"=>"http://www.eyeem.com/u/varek", 
+    "thumbUrl"=>"https://graph.facebook.com/1449441885/picture?type=square", 
+    "photoUrl"=>"https://graph.facebook.com/1449441885/picture?type=large", 
+    "totalPhotos"=>21, 
+    "totalFollowers"=>11, 
+    "totalFriends"=>13, 
+    "totalLikedAlbums"=>15, 
+    "totalLikedPhotos"=>31, 
+    "description"=>""}
+  }
+
 
 This works the same way for most of the requests define in the models folder.
 For optional request parameters take a look at [EyeEm API Wiki](https://github.com/eyeem/Public-API/wiki).
