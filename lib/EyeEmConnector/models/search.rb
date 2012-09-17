@@ -6,7 +6,7 @@ module EyeEmConnector
       # for the options of different albums endpoints, see https://github.com/eyeem/Public-API/wiki/Albums 
 
       def search(options={})
-        response = request('search',options)
+        response = get('search',options)
         response.body
       end
 

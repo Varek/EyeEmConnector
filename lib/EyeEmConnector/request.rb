@@ -3,13 +3,25 @@ require 'rash'
 module EyeEmConnector
 
   module Request
-    def request(endpoint,options={})
-      response = connection.get(endpoint) do |rq|
-        options.each do |option, value|
-          rq.params[option] = value
-        end
-      end || ''
-      response
+
+    def get(endpoint, options={})
+      request(:get, endpoint, options)
+    end
+
+    def post(endpoint, options={})
+      request(:post, endpoint, options)
+    end
+
+    def put(endpoint, options={})
+      request(:put, endpoint, options)
+    end
+
+    def delete(endpoint, options={})
+      request(:delete, endpoint, options)
+    end
+
+    def request(method, endpoint, options)
+      connection.send(method, endpoint, options) || ''
     end
   end
   
