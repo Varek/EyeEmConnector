@@ -35,6 +35,15 @@ module EyeEmConnector
         response.body
       end
 
+      def photo_albums(id,options={})
+        response = get('photos/'+id.to_s+'/albums',options)
+        response.body
+      end
+
+      def random_photo(options={})
+        response = get('api/popular/random',options)
+        response.body
+      end
     end
   end
 end

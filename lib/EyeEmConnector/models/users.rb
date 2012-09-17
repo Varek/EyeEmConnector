@@ -40,6 +40,11 @@ module EyeEmConnector
         response.body
       end
 
+      def user_discover(id,options={}) #access token required
+        response = get('users/'+id.to_s+'/discover',options)
+        response.body
+      end
+
       def user_friends(id,options={})
         response = get('users/'+id.to_s+'/friends',options)
         response.body
@@ -67,6 +72,11 @@ module EyeEmConnector
 
       def user_social_media(id,options={}) #access token required
         response = get("users/#{id.to_s}/socialMedia",options)
+        response.body
+      end
+
+      def user_news_settings(id,options={}) #access token required
+        response = get("users/#{id.to_s}/newsSettings",options)
         response.body
       end
 
