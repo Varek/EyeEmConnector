@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "EyeEmConnector"
-  s.version = "0.0.1"
+  s.version = "0.1.0.beta1"
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
+  s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andr\u{e9} Rieck"]
-  s.date = "2012-05-17"
+  s.date = "2012-09-22"
   s.description = "EyeEm API Wrapper in Ruby"
   s.email = "4ndr3r13ck@googlemail.com"
   s.extra_rdoc_files = [
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     ".rspec",
+    "EyeEmConnector.gemspec",
     "Gemfile",
     "LICENSE.txt",
     "README.rdoc",
@@ -33,6 +34,7 @@ Gem::Specification.new do |s|
     "lib/EyeEmConnector/models/search.rb",
     "lib/EyeEmConnector/models/topics.rb",
     "lib/EyeEmConnector/models/users.rb",
+    "lib/EyeEmConnector/models/venues.rb",
     "lib/EyeEmConnector/request.rb",
     "spec/EyeEmConnector_spec.rb",
     "spec/spec_helper.rb"
