@@ -35,13 +35,33 @@ module EyeEmConnector
       end
       
       def album_liker(album_id,liker_id,options={})
-        response = get("albums/#{album_id.to_s}/likers/#{liker_id}",options)
-        response.status == 200
+        response = get("albums/#{album_id}/likers/#{liker_id}",options,true)
       end
 
       def album_contributor(album_id,contributer_id,options={})
-        response = get("albums/#{album_id.to_s}/contributors/#{contributer_id}",options)
-        response.status == 200
+        response = get("albums/#{album_id}/contributors/#{contributer_id}",options,true)
+      end
+
+      ### PUT
+
+      # for adding photo to an album see add_photo_to_album in photos.rb
+
+      def like_album(album_id,liker_id)
+        response = put("albums/#{album_id}/likers/#{liker_id}",true)        
+      end
+
+      ### POST
+
+      def share_album(album_id,services) #available services: twitter,facebook,tumblr as comma separated string
+        response = post("albums/#{album_id}/share",options.merge(:services => services),true)
+      end
+
+      ### DELETE
+
+      # to remove photo from an albums see remove_photo_to_album in photos.rb
+
+      def unlike_album(album_id,liker_id)
+        response = delete("albums/#{album_id}/likers/#{liker_id}",true)        
       end
 
     end

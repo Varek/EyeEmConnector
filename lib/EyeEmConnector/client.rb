@@ -21,6 +21,7 @@ module EyeEmConnector
       Faraday::Connection.new(:url => Configuration::ENDPOINT, :params => params, :ssl => {:verify => false}) do |builder|
         builder.request :oauth2, @access_token unless @access_token.nil?
         builder.request :json
+        builder.request :multipart
         builder.response :json
         builder.adapter Faraday.default_adapter
       end
@@ -33,6 +34,7 @@ module EyeEmConnector
     include EyeEmConnector::Client::Search
     include EyeEmConnector::Client::Topics
     include EyeEmConnector::Client::Users
+    include EyeEmConnector::Client::Venues
 
   end
   
