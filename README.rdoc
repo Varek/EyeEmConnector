@@ -19,7 +19,7 @@ Create an EyeEm App here: http://www.eyeem.com/developers and enter at least the
 Requests can be done afterwards, lik this:
 
 
-  EyeEmConnector.users(59550)
+  EyeEmConnector.user(59550)
 
 
 This returns a Hash like this
@@ -64,6 +64,6 @@ For optional request parameters take a look at [EyeEm API Wiki](https://github.c
 
 == Copyright
 
-Copyright (c) 2012 André Rieck. See LICENSE.txt for
+Copyright (c) 2012-2013 André Rieck. See LICENSE.txt for
 further details.
 
