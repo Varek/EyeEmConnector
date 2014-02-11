@@ -18,7 +18,8 @@ module EyeEmConnector
 
     def connection
       params = access_token.nil? ? {:client_id => @client_id} : {}
-      Faraday::Connection.new(:url => Configuration::ENDPOINT, :params => params, :ssl => {:verify => false}) do |builder|
+      headers = api_version.nil? ? {} : {'X-Api-Version' => @api_version}
+      Faraday::Connection.new(:url => Configuration::ENDPOINT, :params => params, :headers => headers, :ssl => {:verify => false}) do |builder|
         builder.request :oauth2, @access_token unless @access_token.nil?
         builder.request :json
         builder.request :multipart
@@ -37,5 +38,5 @@ module EyeEmConnector
     include EyeEmConnector::Client::Venues
 
   end
-  
+
 end

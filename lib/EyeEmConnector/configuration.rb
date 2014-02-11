@@ -3,9 +3,9 @@ module EyeEmConnector
   module Configuration
 
     ENDPOINT = 'https://www.eyeem.com/api/v2/'
-    VALID_OPTIONS = [:client_id, :client_secret, :access_token]
+    VALID_OPTIONS = [:client_id, :client_secret, :access_token, :api_version]
     attr_accessor *VALID_OPTIONS
-    
+
     def configure
       yield self
     end
