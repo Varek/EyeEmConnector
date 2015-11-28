@@ -30,6 +30,7 @@ module EyeEmConnector
 
     include Request
     include EyeEmConnector::Client::Albums
+    include EyeEmConnector::Client::Missions
     include EyeEmConnector::Client::News
     include EyeEmConnector::Client::Photos
     include EyeEmConnector::Client::Search
