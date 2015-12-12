@@ -4,7 +4,7 @@ source "http://rubygems.org"
 #   gem "activesupport", ">= 2.3.5"
   gem 'oauth2'
   gem 'multi_json'
-  gem 'faraday', "~> 0.8.0"
+  gem 'faraday', "~> 0.8"
   gem 'faraday_middleware'
   gem 'rash'
 
