@@ -6,7 +6,6 @@ source "http://rubygems.org"
   gem 'multi_json'
   gem 'faraday', "~> 0.8"
   gem 'faraday_middleware'
-  gem 'rash'
 
 
 # Add dependencies to develop your gem here.

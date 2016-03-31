@@ -1,5 +1,5 @@
 require 'multi_json'
-require 'rash'
+
 module EyeEmConnector
 
   module Request
@@ -52,5 +52,5 @@ module EyeEmConnector
       end
     end
   end
-  
+
 end
